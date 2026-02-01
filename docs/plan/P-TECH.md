@@ -32,12 +32,11 @@
 | Supabase Database | Hosted PostgreSQL + Row Level Security (RLS) |
 | @supabase/ssr | Supabase client for Next.js server components |
 | Next.js Server Actions | Replaces API endpoints (data mutation) |
-| Next.js Route Handlers | External API communication (Gemini, Google Calendar) |
+| Next.js Route Handlers | External API communication (Gemini) |
 
 ## 7.3 External Services
 
 | Service | Purpose | Call Method |
 | ------- | ------- | ----------- |
 | Gemini 3 API (Flash/Pro) | AI recommendations (구체화하기) | Next.js Server Action / Route Handler |
-| Google Calendar API | Calendar integration | Next.js Route Handler |
 | Google OAuth | Login | Built into Supabase Auth |

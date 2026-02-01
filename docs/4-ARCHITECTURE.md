@@ -60,9 +60,6 @@ inu-v3/
 │   │   ├── retro/
 │   │   │   └── page.tsx              # `/retro` → Retrospective (S-RETRO)
 │   │   │
-│   │   ├── calendar/
-│   │   │   └── page.tsx              # `/calendar` → Calendar (S-CAL, P1)
-│   │   │
 │   │   ├── settings/
 │   │   │   └── page.tsx              # `/settings` → Settings (S-SET)
 │   │   │
@@ -246,7 +243,6 @@ inu-v3/
 | `/auth/callback` | OAuth callback | OAuth callback | — |
 | `/tree` | Redirect → `/auth` | Tree View | S-TREE |
 | `/retro` | Redirect → `/auth` | Retrospective | S-RETRO |
-| `/calendar` | Redirect → `/auth` | Calendar (P1) | S-CAL |
 | `/settings` | Redirect → `/auth` | Settings | S-SET |
 
 Modals (S-WEL, S-GOAL, S-DETAIL, S-REFINE, S-PHASE, S-CHANGE, S-COMPLETE) are managed via Zustand state — no URLs.
@@ -260,7 +256,7 @@ Request
   │
   ├─ Is public route (`/`, `/auth`)? → Refresh session, pass through
   │
-  ├─ Is protected route (`/tree`, `/retro`, `/calendar`, `/settings`)?
+  ├─ Is protected route (`/tree`, `/retro`, `/settings`)?
   │    ├─ Has valid session? → Pass through
   │    └─ No session? → Redirect to `/auth`
   │
@@ -337,7 +333,7 @@ RootLayout (server)
 ├── [Authenticated]
 │   ├── Header (client)
 │   │   ├── Logo
-│   │   ├── MainTabs (회고 / 목표 / 캘린더)
+│   │   ├── MainTabs (회고 / 목표)
 │   │   │   └── RetroNudgeDot (client — checks daily journal)
 │   │   └── UserAvatar + Dropdown
 │   │

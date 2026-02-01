@@ -16,7 +16,6 @@
 | S-GOAL | Goal Creation | Inline in Tree View | Create Goal directly within the tree view | [S-GOAL.md](wireframes/02-onboarding/S-GOAL.md) |
 | S-CARD | Card View | Page (Default) | Goal card list + inline Actions + weekly schedule (split layout) | [S-CARD.md](wireframes/03-main/S-CARD.md) |
 | S-TREE | Tree View | Page | Goal structure tree visualization + Goal creation | [S-TREE.md](wireframes/03-main/S-TREE.md) |
-| S-CAL | Calendar View | Page (P1) | Action schedule visualization | [S-CAL.md](wireframes/03-main/S-CAL.md) |
 | S-DETAIL | Goal Detail | Modal | Goal edit/detail + reflection notes + Cross-Goal | [S-DETAIL.md](wireframes/04-goal-modals/S-DETAIL.md) |
 | S-REFINE | 구체화하기 | Modal | Add refinement | [S-REFINE.md](wireframes/04-goal-modals/S-REFINE.md) |
 | S-PHASE | Phase Complete | Modal | Phase feedback + next step | [S-PHASE.md](wireframes/04-goal-modals/S-PHASE.md) |
@@ -44,7 +43,6 @@
 
 - [S-CARD — Card View (Desktop Split / Mobile / Empty / Complete + Inline Actions + Weekly Schedule)](wireframes/03-main/S-CARD.md)
 - [S-TREE — Tree View (T-1~T-14 + Rule Table)](wireframes/03-main/S-TREE.md) ★ Largest
-- [S-CAL — Calendar View (P1)](wireframes/03-main/S-CAL.md)
 
 ### Goal-Related Modals
 
@@ -147,7 +145,7 @@ AI failure → rule-based fallback (seamlessly replaced without separate notific
 | Hover | Increased shadow (header area) |
 | On Action check | ☐→☑ + strikethrough + progress bar update animation |
 
-### Right Panel (Weekly Schedule) States
+### Right Panel (Weekly/Monthly Schedule) States
 
 | State | Representation |
 | ----- | -------------- |
@@ -155,6 +153,9 @@ AI failure → rule-based fallback (seamlessly replaced without separate notific
 | Date dot (scheduled) | Empty circle ○ |
 | Today's date | Bold emphasis + "오늘" label |
 | Date with no Actions | "일정이 없어요" message |
+| Monthly view active | Mini calendar grid with category dots per date |
+| Monthly today highlight | Bold bracket [14] around today's date |
+| View toggle | [주간] / [월간] tabs with underline on active |
 
 ### Phase States
 
@@ -187,7 +188,7 @@ AI failure → rule-based fallback (seamlessly replaced without separate notific
 | Incomplete | ☐ empty checkbox |
 | Complete | ☑ checked + strikethrough |
 | Shared | 🔗 icon (linked to other Goals) |
-| Scheduled | 📅 icon (synced with calendar) |
+| Scheduled | 📅 icon (has scheduled date) |
 
 ### Toast Notifications
 
@@ -223,7 +224,7 @@ AI failure → rule-based fallback (seamlessly replaced without separate notific
 
 ## 5. Interaction Definitions
 
-### Main Section Transition (Retrospective ↔ Goals ↔ Calendar)
+### Main Section Transition (Retrospective ↔ Goals)
 
 | Step | Description | Duration |
 | ---- | ----------- | -------- |
@@ -247,7 +248,7 @@ AI failure → rule-based fallback (seamlessly replaced without separate notific
 | 2 | Progress bar width update | 300ms ease |
 | 3 | Right panel Action state sync | Immediate |
 
-### Right Panel Weekly Strip Date Switch
+### Right Panel Date Switch (Weekly/Monthly)
 
 | Step | Description | Duration |
 | ---- | ----------- | -------- |
@@ -322,7 +323,7 @@ AI failure → rule-based fallback (seamlessly replaced without separate notific
 *v4.2 changes: Subdivided wireframes folder into 6 subfolders — 01-unauthenticated, 02-onboarding, 03-main, 04-goal-modals, 05-retrospective, 06-etc.*
 *v4.1 changes: Wireframe file separation — Split 2,687-line body into 17 individual files in the `docs/wireframes/` folder. This file changed to an overview file maintaining only the screen list + state definitions + interaction definitions.*
 *v4.0 changes: Full wireframe UI redesign — Rounded corners (`╭╮╰╯`) + shadows (`░░░`) + active tab underline (`━━━`) + Seal speech bubble (`🦭 ◁`), etc., fully replaced to feel like an actual app UI. Layout width expanded to 80–90 characters. S-TREE section significantly expanded (3 → 15 wireframes): Empty State, single/multiple Goals, node anatomy, node states, zoom levels, connection line types, WHY Depth, interaction flows, Auto-Layout, inline Goal creation, context menu, Mobile tree added. Added `░░░` overlay background to modals. Integrated mobile wireframes into each section. Added tree node states/connection line states to state definitions. Added mobile touch/modal animation to interaction definitions.*
-*v3.0 changes: Navigation structure reorganization — Changed entire header to 3 main sections [📝 회고] [🎯 목표] [📅 캘린더], removed existing header 📝 icon. S-JRNL → S-RETRO retrospective page full redesign (daily retrospective: daily mood + optional goal-specific record tiles, weekly retrospective P1: auto summary + weekly impressions). S-JOURNAL → S-JRNL-ENTRY name change + emotion wording update. Mobile header update. Retrospective tab nudge state definition change.*
+*v3.0 changes: Navigation structure reorganization — Changed entire header to 3 main sections [📝 회고] [🎯 목표], removed existing header 📝 icon. S-JRNL → S-RETRO retrospective page full redesign (daily retrospective: daily mood + optional goal-specific record tiles, weekly retrospective P1: auto summary + weekly impressions). S-JOURNAL → S-JRNL-ENTRY name change + emotion wording update. Mobile header update. Retrospective tab nudge state definition change.*
 *v2.3 changes: Removed S-GOAL Step 1 [+ 직접 입력] (fixed 9 categories). Added S-CARD card interaction table (card click → S-DETAIL, checkbox toggle, [+ 새 목표 추가] → switch to Tree View, [⋯] dropdown). Specified S-CARD/S-DETAIL HOW hidden when skipped.*
 *v2.2 changes: S-GOAL flow refinement — Added Step 2 WHAT refinement (fixed options + AI recommendations), added Step 3 WHY selection (AI recommendations + existing WHY reuse), renumbered to Step 4. Added S-TREE Auto-Layout rules. Added mobile WHAT/WHY wireframes. Added fixed WHAT options table per category. Specified option classification rules (fixed/AI/existing WHY).*
 *v2.1 changes: Added S-JRNL reflection-only page wireframes (Desktop/Mobile/Empty State/record complete state), added 📝 icon to all header wireframes, added reflection page state definitions + header 📝 icon state definitions.*

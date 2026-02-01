@@ -95,7 +95,6 @@
         │    ├── [✨ 구체화하기] → answer additional questions to expand structure
         │    ├── [📝 기록] → navigate to S-RETRO page (auto-expands the Goal tile)
         │    ├── [🔗 연결된 목표] → view Cross-Goal mapping
-        │    ├── [📅 일정] → add Action to Google Calendar
         │    └── When all Actions are complete → Phase completion feedback
         │         ├── View "나의 페이스" data
         │         ├── Coaching message guides to next step
@@ -118,14 +117,13 @@
 
 ```text
 ┌────────────────────────────────────────────────────────────────┐
-│  [📝 회고]  ←→  [🎯 목표]  ←→  [📅 캘린더]                     │
+│  [📝 회고]  ←→  [🎯 목표]                                      │
 │                   ├─ Card View (default)                       │
 │                   └─ Tree View                                 │
 │                                                                │
 │  회고: Daily/weekly retrospective + emotion flow + timeline    │
 │  Goals: Individual goal management (Card View) + structure     │
 │         visualization (Tree View)                              │
-│  캘린더: Action schedule in weekly/monthly view (P1)           │
 └────────────────────────────────────────────────────────────────┘
 
 Navigation: Click top main tab → smooth animated transition

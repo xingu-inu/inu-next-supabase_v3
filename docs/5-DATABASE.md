@@ -747,7 +747,7 @@ where g.user_id = $1
 order by g.display_order, pa.display_order;
 ```
 
-> Note: MVP does not have date-specific scheduling on actions. The weekly panel shows all in-progress actions. Date-specific scheduling comes with Calendar (P1).
+> Note: The weekly panel in Card View shows all in-progress actions. Date-specific scheduling for individual actions is planned for a future update.
 
 ### 5.6 Retro Nudge Check
 

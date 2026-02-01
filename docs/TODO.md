@@ -59,7 +59,7 @@
 - [ ] `src/actions/auth.ts` — `signInWithGoogle()`, `signOut()`
 - [ ] `src/middleware.ts` — Auth routing middleware:
   - Public routes: `/`, `/auth`
-  - Protected routes: `/tree`, `/retro`, `/calendar`, `/settings`
+  - Protected routes: `/tree`, `/retro`, `/settings`
   - Session refresh on every request
 - [ ] Conditional rendering on `/` (landing for unauth, card view for auth)
 
@@ -199,7 +199,7 @@
 
 - [ ] `src/app/layout.tsx` — Root layout (fonts, ThemeScript, SupabaseProvider, ToastProvider)
 - [ ] `src/components/layout/header.tsx` — Logo (🦭 INU), MainTabs, UserAvatar + dropdown
-- [ ] `src/components/layout/main-tabs.tsx` — [📝 회고] [🎯 목표] [📅 캘린더] with RetroNudgeDot
+- [ ] `src/components/layout/main-tabs.tsx` — [📝 회고] [🎯 목표] with RetroNudgeDot
 - [ ] `src/components/layout/goals-sub-toggle.tsx` — [📋 카드] / [🌳 트리] toggle
 - [ ] `src/components/modals/modal-overlay.tsx` — Glass-3 overlay with backdrop blur, click-outside-to-close
 - [ ] Root-level modal renderer (reads `activeModal` from Zustand, renders appropriate modal)
@@ -571,12 +571,6 @@
 - [ ] Weekly nudge: ● dot on retro tab if no weekly retro by Sunday/Monday
 - [ ] "이번 주 기록이 없어요" notice for weeks with no daily entries
 
-### Calendar View (S-CAL)
-
-- [ ] `src/app/calendar/page.tsx` — Calendar page
-- [ ] Weekly/monthly view of actions with dates
-- [ ] Same data as Card/Tree, time-axis visualization
-
 ### AI Recommendations (Gemini 3)
 
 - [ ] `src/app/api/ai/route.ts` — Route Handler for Gemini 3 API
@@ -587,20 +581,14 @@
 - [ ] Fallback: skeleton shimmer loading → timeout 5s → switch to rule-based options
 - [ ] AI failure: "AI 추천을 불러오지 못했어요" notice + rule-based fallback
 
-### Google Calendar Integration
-
-- [ ] Route Handler for Google Calendar API
-- [ ] Export actions with dates to Google Calendar
-
 ### Cross-Goal Tree Visualization
 
 - [ ] DashedEdge connections between goals in Tree View (visual representation)
 - [ ] AI-based similar Action recommendations
 
 **References:**
-- [P-FEATURES.md](plan/P-FEATURES.md) §3.6 Calendar View, §3.7 AI Recommendations
+- [P-FEATURES.md](plan/P-FEATURES.md) §3.7 AI Recommendations
 - [P-MVP.md](plan/P-MVP.md) §9.1 P1 items
-- [S-CAL.md](wireframes/03-main/S-CAL.md) — Calendar view wireframe
 - [S-RETRO.md](wireframes/05-retrospective/S-RETRO.md) — Weekly retro section
 
 ---

@@ -16,7 +16,6 @@
 | S-GOAL | Goal 생성 | Tree View Inline | Create Goals directly within Tree View |
 | S-CARD | Goals - 카드 뷰 | Page (Default) | Goal card list (default screen, includes completed goals tab). Sub-view within Goals section |
 | S-TREE | Goals - 트리 뷰 | Page | Goal structure tree visualization + Goal creation. Sub-view within Goals section |
-| S-CAL | 캘린더 | Page (P1) | Action schedule visualization |
 | S-RETRO | 회고 페이지 | Page | Daily/weekly retrospective + emotion flow chart + unified timeline (accessed via main tab [📝 회고]) |
 | S-RETRO-DAILY | 일일 회고 | S-RETRO sub-view | Daily mood + optional per-goal reflection entries |
 | S-RETRO-WEEKLY | 주간 회고 | S-RETRO sub-view (P1) | Auto-generated weekly summary + weekly reflection entry |
@@ -48,7 +47,6 @@ INU
 │   ├── [🎯 목표]
 │   │     ├── S-CARD 카드 뷰 ← default screen
 │   │     └── S-TREE 트리 뷰 (+ inline Goal creation)
-│   ├── [📅 캘린더] S-CAL 캘린더 뷰 (P1)
 │   ├── [Modal] S-DETAIL Goal detail/edit
 │   └── [Modal] S-REFINE 구체화하기
 │
@@ -62,15 +60,14 @@ INU
 ## 5.3 Navigation
 
 ```text
-🦭 INU    [📝 회고] [🎯 목표 ▾] [📅 캘린더]    👤
+🦭 INU    [📝 회고] [🎯 목표 ▾]    👤
               ●        └─ [카드 뷰] / [트리 뷰]
 ```
 
 - **Logo** (🦭 INU): Click → main screen (Goals Card View)
-- **Main tabs**: [📝 회고] [🎯 목표] [📅 캘린더] — 3 primary sections
+- **Main tabs**: [📝 회고] [🎯 목표] — 2 primary sections
   - **[📝 회고]**: Click → retrospective page (/retro). Shows dot (●) nudge if today's daily retrospective is not yet recorded
   - **[🎯 목표]**: Click → Goals section. Switch between [카드 뷰] / [트리 뷰] via internal sub-toggle
-  - **[📅 캘린더]**: Click → calendar view (P1)
 - **User Avatar**: Click → settings/logout dropdown
 
 > Card View and Tree View are different visualizations of the same Goal data, so they are unified as a sub-toggle within the Goals section. Retrospective is a separate section for recording/reflection activities.
@@ -85,7 +82,6 @@ INU
 | S-CARD | `/` (default after authentication) |
 | S-TREE | `/tree` |
 | S-RETRO | `/retro` |
-| S-CAL | `/calendar` |
 | S-SET | `/settings` |
 
 > **Same URL handling**: `/` renders different screens based on authentication state

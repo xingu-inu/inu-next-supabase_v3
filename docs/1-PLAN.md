@@ -14,7 +14,7 @@
 | ---- | ---- | ---- | ---- |
 | 1 | Service Overview | [P-OVERVIEW.md](plan/P-OVERVIEW.md) | Basic info, core philosophy, brand metaphor, design principles |
 | 2 | Problem Definition & Target | [P-TARGET.md](plan/P-TARGET.md) | Problem to solve, target users, personas |
-| 3 | Core Features | [P-FEATURES.md](plan/P-FEATURES.md) | Goal creation, card view, tree view, coaching, AI, retrospective, etc. (3.1–3.11) |
+| 3 | Core Features | [P-FEATURES.md](plan/P-FEATURES.md) | Goal creation, card view, tree view, coaching, AI, retrospective, etc. (3.1–3.10) |
 | 4 | User Flows | [P-FLOWS.md](plan/P-FLOWS.md) | Onboarding, Goal CRUD, daily use, section switching (4.1–4.7) |
 | 5 | Information Architecture | [P-IA.md](plan/P-IA.md) | Screen list, sitemap, navigation, URL structure |
 | 6 | Category System | [P-CATEGORY.md](plan/P-CATEGORY.md) | Category list, importance, WHY options, Phase/Action templates |
@@ -39,12 +39,11 @@
   - 3.3 Tree View (Goal Structure Visualization)
   - 3.4 구체화하기 (Expanding Existing Goals)
   - 3.5 Adaptive Roadmap & Coaching System
-  - 3.6 Calendar View
-  - 3.7 AI Recommendations (Gemini 3)
-  - 3.8 Change History Tracking
-  - 3.9 Cross-Goal Mapping
-  - 3.10 Retrospective System
-  - 3.11 Data Utilization: Insights
+  - 3.6 AI Recommendations (Gemini 3)
+  - 3.7 Change History Tracking
+  - 3.8 Cross-Goal Mapping
+  - 3.9 Retrospective System
+  - 3.10 Data Utilization: Insights
 
 ### User Flows & Design
 

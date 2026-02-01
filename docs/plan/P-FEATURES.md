@@ -1,6 +1,6 @@
 # P-FEATURES — Core Features
 
-> Full feature spec covering Goal creation, Card View, Tree View, Coaching, AI Recommendations, Retrospective, etc. (3.1–3.11)
+> Full feature spec covering Goal creation, Card View, Tree View, Coaching, AI Recommendations, Retrospective, etc. (3.1–3.10)
 
 ← [Plan Overview](../1-PLAN.md)
 
@@ -74,16 +74,18 @@ Main screen. **Left card list + Right weekly schedule panel** in a split layout.
 
 > Clicking the card header area (title/WHY/progress) opens the **S-DETAIL modal** for detailed viewing/editing. Action checkboxes can be completed directly on the card (no modal needed).
 
-**Right panel (Weekly Schedule)**:
+**Right panel (Weekly/Monthly Schedule)**:
 
 | Element | Description |
 | ---- | ---- |
-| Weekly strip | This week's 7 days (Mon–Sun). Completed Actions shown as category-colored dots |
+| **View toggle** | [주간] (default) / [월간] switch |
+| Weekly strip (default) | This week's 7 days (Mon–Sun). Completed Actions shown as category-colored dots |
+| Monthly grid | Mini calendar with category-colored dots per date. Click a date to see its Actions |
 | Date selection | Click a date → shows that date's Action list (default: today) |
 | Action list | All Actions for the selected date (category icon + name + checkbox) |
 | Completion rate | "✅ 완료 1/3" |
 
-> The right panel is for "today's to-do" summary. Full schedule management is in the main Calendar tab (S-CAL, P1).
+> The right panel provides schedule overview in weekly or monthly format. Weekly view is the default.
 > When switching to Tree View, the right panel hides → tree canvas uses full width.
 
 ## 3.3 Tree View (Goal Structure Visualization + Cross-Goal Connections)
@@ -222,16 +224,7 @@ Provides context-appropriate coaching messages at each phase to help the user un
   - If no recommendation target exists, prompt new Goal creation
   - Implementation: Aggregate goal_journals + goal_whys tables (no AI needed)
 
-## 3.6 Calendar View
-
-Visualize Action schedules on a weekly/monthly basis. The third view tab alongside Card and Tree.
-
-- Time-axis visualization of the same data as Card/Tree views
-- Display Actions that have dates set on the calendar
-- Support export via Google Calendar integration
-- In MVP this is P1 (Card/Tree come first)
-
-## 3.7 AI Recommendations (Gemini 3)
+## 3.6 AI Recommendations (Gemini 3)
 
 | Feature | Description |
 | ---- | ---- |
@@ -255,7 +248,7 @@ Visualize Action schedules on a weekly/monthly basis. The third view tab alongsi
 | Rule-based default behavior | Display from pre-defined option pool per category (always works) |
 | **MVP (AI P1)** | **Fixed option pools only** — WHAT: fixed WHAT options per category from 2-WIREFRAMES, WHY: [§6.3](P-CATEGORY.md), Phase/Action: [§6.4](P-CATEGORY.md) + [PHASE-TEMPLATES.md](../data/PHASE-TEMPLATES.md) |
 
-## 3.8 Change History Tracking
+## 3.7 Change History Tracking
 
 When a Goal's attributes (WHY, category, frequency, etc.) are changed later, ask **"왜 바꾸나요?"** → record the reason for the change.
 
@@ -269,7 +262,7 @@ When a Goal's attributes (WHY, category, frequency, etc.) are changed later, ask
 | Pattern discovery | "I always change my reason after 2 weeks" |
 | Long-term data | Long-term data accumulation for deeper self-understanding |
 
-## 3.9 Cross-Goal Mapping (Goal Impact Map)
+## 3.8 Cross-Goal Mapping (Goal Impact Map)
 
 **Core idea**: Visualize how a single activity contributes to multiple goals. See at a glance "which goals move forward simultaneously when I do this."
 
@@ -321,7 +314,7 @@ When a Goal's attributes (WHY, category, frequency, etc.) are changed later, ask
 | **Efficiency** | Discover overlapping activities to save time |
 | **Self-understanding** | "So my goals are connected like this" → deeper understanding |
 
-## 3.10 Retrospective System
+## 3.9 Retrospective System
 
 **Core idea**: A retrospective system for comfortably looking back on the day and the week, like writing a diary. **"Overall mood of the day" is the #1 priority; per-goal entries are optional**. Access via the main tab [📝 회고] to naturally accumulate qualitative self-understanding data.
 
@@ -420,7 +413,7 @@ Starts with the question **"오늘 하루 어땠어요?"** in a diary format.
 
 > **MVP (P0)**: Daily retrospective (daily mood + optional per-goal entries) + emotion flow chart + unified timeline + Goal card journal modal. **P1**: Weekly retrospective (auto-summary + weekly reflection). AI emotion pattern analysis is Phase 2.
 
-## 3.11 Data Utilization: Insights (Past → Future Flow)
+## 3.10 Data Utilization: Insights (Past → Future Flow)
 
 **Core idea**: Connect accumulated past data (journal notes, change history, Phase duration, Action completion rate) to future actions to strengthen self-understanding. MVP includes **only what can be implemented with simple DB aggregations (COUNT, AVG)**.
 

@@ -512,7 +512,7 @@ All tabs use a unified **underline style**.
 
 | Tab Type | Usage | Underline |
 | -------- | ----- | --------- |
-| Main nav | `📝 Retrospective` `🎯 Goals` `📅 Calendar` | 2px, `Sunrise-500` |
+| Main nav | `📝 Retrospective` `🎯 Goals` | 2px, `Sunrise-500` |
 | Sub toggle | `📋 Cards` / `🌳 Tree` | 2px, `Sunrise-500` |
 | Card view tabs | `In Progress` / `Completed Goals` | 2px, `Sunrise-500` |
 | Modal tabs | S-DETAIL `Info` `Reflection Notes` `Change History` | 2px, `Sunrise-500` |
@@ -664,7 +664,7 @@ INU uses native emoji as its primary icon system.
 | 🦭 | Mascot, coaching messages, brand |
 | 📝 | Retrospective tab |
 | 🎯 | Goals tab, WHY node prefix |
-| 📅 | Calendar tab, scheduled action badge |
+| 📅 | Scheduled action badge |
 | 🔗 | Shared actions, Cross-Goal connections |
 | ✨ | Refine/elaborate |
 | 📍 | Progress indicator |
@@ -733,7 +733,7 @@ INU's motion **should not draw attention to itself**. It should be minimal enoug
 
 | Interaction | Treatment |
 | ----------- | --------- |
-| Main section switch (Retrospective ↔ Goals ↔ Calendar) | Current fade-out 150ms → new section fade-in 150ms (total 300ms) |
+| Main section switch (Retrospective ↔ Goals) | Current fade-out 150ms → new section fade-in 150ms (total 300ms) |
 | Goals sub-toggle (Cards ↔ Tree) | Current fade-out 100ms → new view fade-in 100ms (total 200ms) |
 | Modal open | Overlay fade-in 150ms + modal fade-in 150ms (simultaneous, total ~200ms) |
 | Modal close | Reverse fade-out 150ms |

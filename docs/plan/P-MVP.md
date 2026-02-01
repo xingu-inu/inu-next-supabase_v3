@@ -29,7 +29,7 @@
 | Google OAuth login | P0 |
 | Multiple WHY selection | P0 |
 | Cross-Goal mapping (connection display within Goal card) | P0 |
-| Navigation restructure ([📝 회고] [🎯 목표] [📅 캘린더]) | P0 |
+| Navigation restructure ([📝 회고] [🎯 목표]) | P0 |
 | Card/Tree sub-toggle within Goals | P0 |
 | Daily retrospective (daily mood + optional per-goal records) | P0 |
 | Per-Goal reflection records (S-DETAIL 📝 → moved to S-RETRO) | P0 |
@@ -47,8 +47,6 @@
 | Goal delete confirmation flow | P0 |
 | Weekly retrospective (auto summary + weekly notes) | P1 |
 | Cross-Goal tree visualization (dotted line connections) | P1 |
-| Calendar view | P1 |
-| Google Calendar integration | P1 |
 | AI recommendations (Gemini 3) | P1 |
 
 ## 9.2 Excluded from MVP (Phase 2)
